@@ -1,0 +1,395 @@
+[gd_scene load_steps=48 format=2]
+
+[ext_resource path="res://FYS_bg.png" type="Texture" id=1]
+[ext_resource path="res://starter spritesheet x4.png" type="Texture" id=2]
+[ext_resource path="res://OpenDyslexic3-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://healthbar_over x4.png" type="Texture" id=4]
+[ext_resource path="res://healthbar_under x4.png" type="Texture" id=5]
+[ext_resource path="res://OpenDyslexic3-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://healthbar_powder_crumbly x3.png" type="Texture" id=7]
+[ext_resource path="res://healthbar_bubbles_wavy x3.png" type="Texture" id=8]
+[ext_resource path="res://breadsystem.gd" type="Script" id=9]
+[ext_resource path="res://ld46 beepboop music.ogg" type="AudioStream" id=10]
+[ext_resource path="res://tchu.wav" type="AudioStream" id=11]
+[ext_resource path="res://acey_BLOOB.wav" type="AudioStream" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 6 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 1044, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 432, 1044, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 864, 1044, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1296, 1044, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1728, 1044, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 2160, 1044, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 432, 0, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 864, 0, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1296, 0, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1728, 0, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 2160, 0, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 696, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 432, 696, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 864, 696, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1296, 696, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1728, 696, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 2160, 696, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 348, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 432, 348, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 864, 348, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1296, 348, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1728, 348, 432, 348 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 2160, 348, 432, 348 )
+
+[sub_resource type="SpriteFrames" id=27]
+animations = [ {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": false,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "happy",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
+"loop": true,
+"name": "bad",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
+"loop": true,
+"name": "not good",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=29]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=30]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=31]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=28]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=32]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=33]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="AudioStreamRandomPitch" id=34]
+audio_stream = ExtResource( 12 )
+
+[sub_resource type="AudioStreamRandomPitch" id=35]
+audio_stream = ExtResource( 11 )
+
+[node name="Main" type="Node2D"]
+
+[node name="CanvasLayer" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Numbers!!!" type="Node" parent="CanvasLayer"]
+script = ExtResource( 9 )
+
+[node name="WaterTimer" type="Timer" parent="CanvasLayer/Numbers!!!"]
+wait_time = 0.75
+
+[node name="FoodTimer" type="Timer" parent="CanvasLayer/Numbers!!!"]
+
+[node name="HealthTimer" type="Timer" parent="CanvasLayer/Numbers!!!"]
+wait_time = 0.35
+
+[node name="DifficultyTimer" type="Timer" parent="CanvasLayer/Numbers!!!"]
+wait_time = 4.0
+
+[node name="HealTimer" type="Timer" parent="CanvasLayer/Numbers!!!"]
+wait_time = 0.15
+
+[node name="AnimTimer" type="Timer" parent="CanvasLayer/Numbers!!!"]
+wait_time = 2.0
+
+[node name="FEED" type="Button" parent="CanvasLayer/Numbers!!!"]
+margin_left = 23.0
+margin_top = 602.0
+margin_right = 237.0
+margin_bottom = 736.0
+custom_fonts/font = SubResource( 1 )
+text = "FEED IT!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MOIST" type="Button" parent="CanvasLayer/Numbers!!!"]
+margin_left = 263.0
+margin_top = 602.0
+margin_right = 481.0
+margin_bottom = 736.0
+custom_fonts/font = SubResource( 2 )
+text = "MOIST IT!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HP" type="TextureProgress" parent="CanvasLayer/Numbers!!!"]
+margin_left = 93.809
+margin_top = 48.9867
+margin_right = 413.809
+margin_bottom = 128.987
+value = 100.0
+texture_under = ExtResource( 5 )
+texture_progress = ExtResource( 4 )
+tint_under = Color( 0.909804, 0.494118, 0.27451, 1 )
+tint_progress = Color( 1, 0.960784, 0.623529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WaterHP" type="TextureProgress" parent="CanvasLayer/Numbers!!!"]
+margin_left = 259.796
+margin_top = 189.008
+margin_right = 579.796
+margin_bottom = 269.008
+value = 100.0
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 8 )
+tint_under = Color( 0.909804, 0.494118, 0.27451, 1 )
+tint_progress = Color( 0.482353, 0.470588, 0.745098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FoodHP" type="TextureProgress" parent="CanvasLayer/Numbers!!!"]
+margin_left = 6.16449
+margin_top = 187.955
+margin_right = 246.164
+margin_bottom = 247.955
+value = 100.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 7 )
+tint_under = Color( 0.909804, 0.494118, 0.27451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Starter" type="AnimatedSprite" parent="CanvasLayer/Numbers!!!"]
+position = Vector2( 258.669, 433.959 )
+frames = SubResource( 27 )
+animation = "happy"
+frame = 5
+playing = true
+
+[node name="Health" type="Label" parent="CanvasLayer/Numbers!!!"]
+margin_left = 194.0
+margin_top = -21.0
+margin_right = 334.0
+margin_bottom = 60.0
+custom_fonts/font = SubResource( 29 )
+text = "Health"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Flour" type="Label" parent="CanvasLayer/Numbers!!!"]
+margin_left = 69.8901
+margin_top = 114.299
+margin_right = 179.89
+margin_bottom = 195.299
+custom_fonts/font = SubResource( 30 )
+text = "Flour"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Water" type="Label" parent="CanvasLayer/Numbers!!!"]
+margin_left = 315.397
+margin_top = 113.132
+margin_right = 450.397
+margin_bottom = 194.132
+custom_fonts/font = SubResource( 31 )
+text = "Water"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Death" type="Label" parent="CanvasLayer/Numbers!!!"]
+visible = false
+margin_left = 15.9943
+margin_top = 41.614
+margin_right = 490.994
+margin_bottom = 290.614
+custom_fonts/font = SubResource( 28 )
+text = "FAILURE
+No sourdough bread for you!"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="Button" parent="CanvasLayer/Numbers!!!"]
+visible = false
+margin_left = 145.924
+margin_top = 601.585
+margin_right = 357.924
+margin_bottom = 735.585
+custom_fonts/font = SubResource( 2 )
+text = "RESTART?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score title" type="Label" parent="CanvasLayer/Numbers!!!"]
+margin_left = 178.881
+margin_top = 710.779
+margin_right = 348.881
+margin_bottom = 810.779
+custom_fonts/font = SubResource( 32 )
+text = "Score:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score number" type="Label" parent="CanvasLayer/Numbers!!!"]
+margin_left = 103.0
+margin_top = 779.0
+margin_right = 425.0
+margin_bottom = 860.0
+custom_fonts/font = SubResource( 33 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score timer" type="Timer" parent="CanvasLayer/Numbers!!!"]
+
+[node name="Music" type="AudioStreamPlayer" parent="CanvasLayer/Numbers!!!"]
+stream = ExtResource( 10 )
+
+[node name="VWOOP" type="AudioStreamPlayer" parent="CanvasLayer/Numbers!!!"]
+stream = SubResource( 34 )
+
+[node name="tchu" type="AudioStreamPlayer" parent="CanvasLayer/Numbers!!!"]
+stream = SubResource( 35 )
+[connection signal="timeout" from="CanvasLayer/Numbers!!!/WaterTimer" to="CanvasLayer/Numbers!!!" method="_on_WaterTimer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Numbers!!!/FoodTimer" to="CanvasLayer/Numbers!!!" method="_on_FoodTimer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Numbers!!!/HealthTimer" to="CanvasLayer/Numbers!!!" method="_on_HealthTimer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Numbers!!!/DifficultyTimer" to="CanvasLayer/Numbers!!!" method="_on_DifficultyTimer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Numbers!!!/HealTimer" to="CanvasLayer/Numbers!!!" method="_on_HealTimer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Numbers!!!/AnimTimer" to="CanvasLayer/Numbers!!!" method="_on_AnimTimer_timeout"]
+[connection signal="pressed" from="CanvasLayer/Numbers!!!/FEED" to="CanvasLayer/Numbers!!!" method="_on_FEED_pressed"]
+[connection signal="pressed" from="CanvasLayer/Numbers!!!/MOIST" to="CanvasLayer/Numbers!!!" method="_on_MOIST_pressed"]
+[connection signal="animation_finished" from="CanvasLayer/Numbers!!!/Starter" to="CanvasLayer/Numbers!!!" method="_on_Starter_animation_finished"]
+[connection signal="pressed" from="CanvasLayer/Numbers!!!/Restart" to="CanvasLayer/Numbers!!!" method="_on_Restart_pressed"]
+[connection signal="timeout" from="CanvasLayer/Numbers!!!/Score timer" to="CanvasLayer/Numbers!!!" method="_on_Score_timer_timeout"]
